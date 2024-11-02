@@ -3,16 +3,16 @@
 #include <ncurses.h>
 
 signed main(){
-	initscr();
+    initscr();
 
-	echo();
-	curs_set(1);
-	nocbreak();
+    echo();
+    curs_set(1);
+    nocbreak();
 
-	endwin();
+    endwin();
 
     fputs("\033[2 q", stdout);
     fflush(stdout);
 
-	return 0;
+    return 0;
 }
