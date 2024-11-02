@@ -1,4 +1,5 @@
 // @BAKE gcc -o $* $@ $(pkg-config --cflags --libs ncurses)
+#include <stdio.h>
 #include <ncurses.h>
 
 signed main(){
@@ -9,5 +10,9 @@ signed main(){
 	nocbreak();
 
 	endwin();
+
+    fputs("\033[2 q", stdout);
+    fflush(stdout);
+
 	return 0;
 }
