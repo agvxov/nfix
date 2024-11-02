@@ -1,3 +1,4 @@
+// @BAKE gcc -o $* $@ $(pkg-config --cflags --libs ncurses)
 #include <ncurses.h>
 
 signed main(){
